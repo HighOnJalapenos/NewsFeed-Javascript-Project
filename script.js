@@ -8,6 +8,10 @@ let dataArray = [];
 
 newsFeedBtn.addEventListener("click", () => {
   if (!newsFeedBtn.classList.contains("active")) {
+    allTopic.forEach((topic) => {
+      topic.classList.remove("active-topic");
+    });
+    allTopic[0].classList.add("active-topic");
     newsFeedBtn.classList.add("active");
     favBtn.classList.remove("active");
     topicBtn.style.visibility = "visible";
