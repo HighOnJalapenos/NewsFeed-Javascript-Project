@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Raleway:wght@300;400;500&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+:root {
+  --titlefont: "Abril Fatface", cursive;
+  --articlefont: "Raleway", sans-serif;
+  --shadow-color: 0deg 0% 56%;
+  --shadow-color-article: 0deg 0% 0%;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  color: #292929;
+  background-color: #f6f6f6;
+  max-width: 80vw;
+  font-family: var(--articlefont);
+}
+
+#title {
+  font-family: var(--titlefont);
+  display: flex;
+  justify-content: center;
+  font-size: 5em;
+  margin: 0;
+  margin-bottom: 3vh;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 3vw;
+  margin-bottom: 2vh;
+}
+
+.feed-button {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: #292929;
+  color: #ffffff;
+  font-family: var(--articlefont);
+  border-radius: 8px;
+  padding: 14px 24px 16px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  box-shadow: 0.3px 0.8px 0.9px hsl(var(--shadow-color) / 0.12),
+    0.7px 2px 2.3px -0.7px hsl(var(--shadow-color) / 0.11),
+    1.5px 4.1px 4.7px -1.4px hsl(var(--shadow-color) / 0.11),
+    3.1px 8.5px 9.8px -2.1px hsl(var(--shadow-color) / 0.1),
+    6.1px 16.8px 19.3px -2.8px hsl(var(--shadow-color) / 0.1);
+  transition: transform 200ms, background 200ms;
+}
+
+.feed-button:hover {
+  transform: translateY(-2px);
+}
+
+.active {
+  background: #ffffff;
+  color: #292929;
+  border: 1px solid;
+  border-color: 292929;
+}
+
+.topics-container {
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+  flex-wrap: wrap;
+}
+
+.topic-button {
+  display: inline-block;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  padding: 12px 17px;
+  border-radius: 50px;
+  background-color: #2222220d;
+  color: #222;
+  font-family: var(--articlefont);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.topic-button:hover {
+  background-color: #2222221a;
+}
+
+.active-topic {
+  background-color: #222;
+  color: #ececec;
+}
+
+.active-topic:hover {
+  background-color: #222;
+  cursor: default;
+}
+
+.topic-line {
+  visibility: hidden;
+  size: 50px;
+}
+
+.articles-container {
+  width: 100%;
+  padding: 15px;
+  line-height: 1.5;
+  margin: 0 auto;
+  margin-top: 3vh;
+}
+
+.article {
+  margin: 1vh;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.42);
+  border: 1px solid;
+  background: rgb(245, 245, 245);
+  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.article:hover {
+  border-bottom-color: rgba(0, 0, 0, 0.87);
+  background: #ececec;
+}
+
+.content {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: inherit;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: end;
+}
+
+.fav-icon {
+  color: red;
+  font-size: 30px;
+}
+
+.fav-icon:hover {
+  cursor: pointer;
+}
+
+.author {
+  font-size: 20px;
+  margin-bottom: 1vh;
+  display: inline;
+  border-bottom: 1px solid red;
+}
+
+.author-name {
+  font-weight: bold;
+}
